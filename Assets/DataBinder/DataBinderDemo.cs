@@ -14,11 +14,14 @@ public class DataBinderDemo : MonoBehaviour
     [SerializeField]
     private DataBinderList m_dataList;                          //Element that generates and controls a list of dataBinder prefabs
 
+    [SerializeField]
+    private Animator m_chartWipe;                               //Animator that controls the animation of the wipe that covers the chart during data transition
+
     private const string PATH_TO_JSON_FILE = "/JSONData/";      //Path (relative to the streaming assets path) pointing to the JSON files
 
     private void Start()
     {
-        TryChangeData("Nasdaq.json");
+        TryChangeData("NYSE.json");
     }
 
     /// <summary>
@@ -30,7 +33,7 @@ public class DataBinderDemo : MonoBehaviour
         JSONNode json = FileReader.ReadJSONFromFile(Application.streamingAssetsPath + PATH_TO_JSON_FILE + JSONFile);
         if (json != null)
         {
-            Debug.Log(json["securities"].ToString());
+            Debug.Log(json["ChartData"].ToString());
             StartCoroutine(ChangeData(json));
         }
     }
@@ -44,13 +47,13 @@ public class DataBinderDemo : MonoBehaviour
     private IEnumerator ChangeData(JSONNode json)
     {
         //Generates a list of dataBinders based on the json provided
-        m_dataList.GenerateList(json);
+        m_dataList.GenerateListInstant(json);
 
         //Registers the json data provided to the dataBinder
         m_dataBinder.RegisterData(json);
 
-        //Plays the update animation for the dataBinder and waits for half of the animation before yielding
-        yield return StartCoroutine(AnimationDispatcher.TriggerAnimation(m_dataBinder.GetComponent<Animator>(), "Update", 0.5f));
+        //Plays the animation for the chart wipe and waits for half of the animation before yielding
+        yield return StartCoroutine(AnimationDispatcher.TriggerAnimation(m_chartWipe, "Play", 0.5f));
 
         //Bind the new data to all databinder components tied to the dataBinder
         m_dataBinder.BindData(); 

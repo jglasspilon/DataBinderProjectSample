@@ -466,7 +466,9 @@
 }
 ]
 "ChartData": {
-"PERIOD_TEXT": "Performance Over Previous Business Day",
+"LABEL": "NASDAQ 100 Index",
+"SYMBOL": "NDAQ",
+"PERIOD_TEXT": "Previous Business Day",
 "NET_CHANGE_PERIOD": "+1.27",
 "PER_CHANGE_PERIOD": "+0.99",
 "NET_CHANGE_PERIOD_ARROW": "1",

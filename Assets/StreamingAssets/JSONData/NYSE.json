@@ -552,7 +552,9 @@
 "CURRENCY_SYMBOL": ""
 },
 "ChartData": {
-"PERIOD_TEXT": "Performance Over Previous Business Day",
+"LABEL": "New York Stock Exchange",
+"SYMBOL": "NYSE",
+"PERIOD_TEXT": "Previous Business Day",
 "NET_CHANGE_PERIOD": "-0.01",
 "PER_CHANGE_PERIOD": "-0.01",
 "NET_CHANGE_PERIOD_ARROW": "-1",
