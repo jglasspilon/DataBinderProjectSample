@@ -8,21 +8,6 @@ using UnityEngine.UI;
 public static class FileLoader
 {
     /// <summary>
-    /// Loads and plays a file from the streaming asset
-    /// </summary>
-    /// <param name="videoPlayer">target video player</param>
-    /// <param name="videoFile">path to the video file (relative to streamingAssets)</param>
-    /// <param name="looping">is the video looping?</param>
-    /// <returns></returns>
-    public static IEnumerator LoadAndPlayStreamingClip(VideoPlayer videoPlayer, string videoFile, bool looping = true)
-    {
-        videoPlayer.source = VideoSource.Url;
-        videoPlayer.url = Application.streamingAssetsPath + "/" + videoFile;
-        videoPlayer.isLooping = looping;
-        yield return MonoEntity.Instance.StartCoroutine(PlayVideo(videoPlayer));
-    }
-
-    /// <summary>
     /// Load a candidates image from the streaming assets
     /// </summary>
     /// <param name="target">target image object</param>
@@ -81,7 +66,7 @@ public static class FileLoader
     /// <param name="candidateName">last name of candidate (needs to match the file names)</param>
     public static void LoadResourcesImage(Image target, E.CandidateImageType imageType, string candidateName)
     {
-        MonoEntity.Instance.StartCoroutine(LoadCandidateResourcesImageAsync(target, imageType, candidateName));   
+        MonoEntity.Instance.StartCoroutine(LoadResourcesImageAsync(target, imageType, candidateName));   
     }
 
     private static IEnumerator PlayVideo(VideoPlayer videoPlayer)
@@ -94,7 +79,7 @@ public static class FileLoader
         videoPlayer.Play();
     }
 
-    private static IEnumerator LoadCandidateResourcesImageAsync(Image target, E.CandidateImageType imageType, string candidateName)
+    private static IEnumerator LoadResourcesImageAsync(Image target, E.CandidateImageType imageType, string candidateName)
     {
         if (target != null)
         {
