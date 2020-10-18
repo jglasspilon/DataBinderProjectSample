@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &851654560794619679
 Transform:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5859400278384234481
 Transform:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8804923930904879477
 Transform:
   m_ObjectHideFlags: 0
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 8804923930949368449}
   - component: {fileID: 8804923930949368450}
   - component: {fileID: 8804923930949368451}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Line_Single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 8804923931163457622}
   - component: {fileID: 8804923931163457623}
   - component: {fileID: 8804923931163457624}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Line_Perf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 8804923931268568551}
   - component: {fileID: 8804923931268568552}
   - component: {fileID: 8804923931268568553}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Line_Perf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4f57e69680eba7a4bbec10be3c3c4414, type: 3}
-  m_Color: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 0.21176471}
+  m_Color: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1433,7 +1433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8804923932364971090}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PDC_Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}

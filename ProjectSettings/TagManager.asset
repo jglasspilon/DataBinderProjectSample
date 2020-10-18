@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Graph_CandleStick
+  - Graph_Border
+  - Graph_LabelX
+  - Graph_LabelY
+  - Graph_GridY
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Overlay
   - 
   - 
   - 
